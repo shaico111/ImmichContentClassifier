@@ -1,22 +1,48 @@
-# Contributing
+# Contributing to ImmichNsfwLocal
 
-Thanks for contributing.
+Thank you for your interest in contributing.
 
-## Guidelines
+This project values **clarity, safety, and simplicity**.
 
-Keep behavior explicit  
-Avoid hidden side effects  
-Do not add cloud dependencies  
-Document user facing changes  
+---
+
+## Table of Contents
+
+- [Contribution rules](#contribution-rules)
+- [Code style](#code-style)
+- [Pull requests](#pull-requests)
+- [Testing](#testing)
+
+
+## Contribution rules
+
+- Keep behavior explicit and predictable
+- Do not add hidden side effects
+- No cloud services or telemetry
+- Changes that modify Immich data must be clearly documented
+
+---
 
 ## Code style
 
-Clear naming  
-Small focused files  
-Readable code  
+- Use meaningful names
+- One responsibility per file
+- Prefer readable code over clever code
+- Avoid large methods
+
+---
+
+## Pull requests
+
+When opening a PR:
+- Explain *why* the change is needed
+- Describe any new flags or behavior
+- Mention if Immich data can be modified
+
+---
 
 ## Testing
 
-Use --dry-run  
-Test small datasets  
-Review logs  
+- Test with `--dry-run`
+- Use small date ranges
+- Verify logs carefully

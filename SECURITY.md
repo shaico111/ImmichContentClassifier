@@ -1,29 +1,46 @@
 # Security and Privacy
 
-ImmichContentClassifier runs entirely on the local machine.
+ImmichNsfwLocal is designed to keep your data private.
 
-## Data handling
+---
 
-All processing is local  
-Only thumbnails are analyzed  
-No telemetry or analytics are collected  
+## Table of Contents
 
-Assets marked as Private in Immich are excluded from archive and locked folder operations.
+- [Privacy guarantees](#privacy-guarantees)
+- [API key safety](#api-key-safety)
+- [Safe operation](#safe-operation)
+- [Threat model](#threat-model)
 
-## API keys
 
-Use environment variables  
-Do not commit keys  
-Rotate keys if logs are shared  
+## Privacy guarantees
 
-## Safe usage
+- All image analysis is local
+- No images are uploaded anywhere
+- No telemetry or tracking
 
-Start with --dry-run  
-Test small date ranges  
-Monitor system load  
+---
 
-## Assumptions
+## API key safety
 
-Trusted local environment  
-Authorized Immich access  
-Non hostile media inputs  
+- Never commit API keys to Git
+- Prefer environment variables
+- Rotate keys if logs are shared
+
+---
+
+## Safe operation
+
+- Always test with `--dry-run`
+- Start with small date ranges
+- Monitor system load
+
+---
+
+## Threat model
+
+This tool assumes:
+- A trusted local environment
+- Authorized Immich access
+- Non-malicious media content
+
+If you need stronger isolation, consider Docker or sandboxing.

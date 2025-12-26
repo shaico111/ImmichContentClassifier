@@ -1,50 +1,117 @@
-# ImmichContentClassifier Operator Guide
+# ImmichContentClassifier – Operator Guide
 
-This guide is for running the tool.
+This guide is for users who **run the tool**, not developers.
+
+---
+
+## Table of Contents
+
+- [Purpose](#purpose)
+- [Safe First Run (Recommended)](#safe-first-run-recommended)
+- [⚠️ Operational Warning](#operational-warning)
+- [Required Setup](#required-setup)
+  - [Immich API Key](#immich-api-key)
+- [Common Commands](#common-commands)
+  - [Scan one day](#scan-one-day)
+  - [Scan a date range](#scan-a-date-range)
+  - [Scan a single asset](#scan-a-single-asset)
+- [Important Flags](#important-flags)
+  - [Safety](#safety)
+  - [Classification](#classification)
+  - [Performance](#performance)
+  - [Logging](#logging)
+- [Recommended Workflow](#recommended-workflow)
+- [Notes](#notes)
+
 
 ## Purpose
 
-Analyze and optionally organize media using local classification.
+ImmichContentClassifier helps you analyze and organize images in Immich using local machine‑learning classification.
 
-Assets in the Private area are never archived and are not moved to the Locked folder.
+---
 
-## First run
+## Safe First Run (Recommended)
 
-Always start with dry run:
+```powershell
+dotnet run -- --dry-run --date 2023-01-01 --log-file logs/test.log
+```
 
-dotnet run -- --dry-run --date 2023-01-01
+No albums will be modified.
 
-## Setup
+---
 
-Set API key:
+## ⚠️ Operational Warning
 
+Running without `--dry-run` **will modify Immich albums**.
+
+Always test on a small date range before large scans.
+
+---
+
+## Required Setup
+
+### Immich API Key
+
+```powershell
 $env:IMMICH_API_KEY="YOUR_API_KEY"
+```
 
-## Common usage
+---
 
-Single day:
+## Common Commands
 
+### Scan one day
+```powershell
 dotnet run -- --date 2023-01-01
+```
 
-Date range:
-
+### Scan a date range
+```powershell
 dotnet run -- --start-date 2023-01-01 --end-date 2023-01-31
+```
 
-Single asset:
-
+### Scan a single asset
+```powershell
 dotnet run -- --asset-id <ASSET_ID>
+```
 
-## Controls
+---
 
---dry-run  
---no-album  
---threshold  
---parallelism  
+## Important Flags
 
-## Workflow
+### Safety
+- `--dry-run` – No album changes
+- `--no-album` – Disable album updates entirely
 
-Dry run  
-Review logs  
-Adjust options  
-Run without dry run  
-Review results  
+### Classification
+- `--threshold 0.70` – Classification cutoff
+- `--ignore-porn`
+- `--ignore-sexy`
+- `--ignore-hentai`
+- `--ignore-neutral`
+
+### Performance
+- `--parallelism N` – Control CPU usage
+
+### Logging
+- `--log-file <path>`
+- `--log-level Info|Debug|Warn|Error`
+- `--no-console`
+
+---
+
+## Recommended Workflow
+
+1. Run with `--dry-run`
+2. Review logs
+3. Adjust threshold and filters
+4. Run without `--dry-run`
+5. Review album results
+
+---
+
+## Notes
+
+- All processing is local
+- CUDA warnings are normal on CPU-only systems
+- Start small before scanning large libraries

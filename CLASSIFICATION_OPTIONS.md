@@ -2,6 +2,14 @@
 
 This document explains classification behavior and tuning.
 
+## Table of Contents
+
+- [Decision logic](#decision-logic)
+- [Category filters](#category-filters)
+- [Examples](#examples)
+- [Notes](#notes)
+
+
 ## Decision logic
 
 An image is flagged when the highest relevant score meets or exceeds the threshold.
