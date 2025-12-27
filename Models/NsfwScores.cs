@@ -1,6 +1,6 @@
 // Purpose: Extract and store category scores from the classifier result and expose helper properties used by decision logic.
 
-namespace ImmichNsfwLocal.Models;
+namespace ImmichContentClassifier.Models;
 
 public sealed record NsfwScores(double Pornography, double Sexy, double Hentai, double Neutral)
 {

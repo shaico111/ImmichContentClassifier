@@ -1,5 +1,5 @@
 // Purpose: Simple data model for an Immich album (ID and name).
 
-namespace ImmichNsfwLocal.Models;
+namespace ImmichContentClassifier.Models;
 
 public sealed record AlbumInfo(string Id, string Name);

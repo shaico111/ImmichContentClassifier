@@ -1,8 +1,8 @@
 // Purpose: Track thread-safe processing statistics for reporting and diagnostics.
 
-using ImmichNsfwLocal.Models;
+using ImmichContentClassifier.Models;
 
-namespace ImmichNsfwLocal.Core;
+namespace ImmichContentClassifier.Core;
 
 public sealed class ProcessingCounters
 {

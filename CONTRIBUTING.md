@@ -1,4 +1,4 @@
-# Contributing to ImmichNsfwLocal
+# Contributing to ImmichContentClassifier
 
 Thank you for your interest in contributing.
 

@@ -1,13 +1,13 @@
 // Purpose: Application entry point. Orchestrates configuration, asset selection, thumbnail classification, and optional album organization.
 
-// ImmichNsfwLocal - Program.cs
+// ImmichContentClassifier - Program.cs
 // Purpose: Scan Immich assets, run NsfwSpy on thumbnails, and optionally move assets into albums based on a threshold.
 
-using ImmichNsfwLocal.Core;
-using ImmichNsfwLocal.Immich;
-using ImmichNsfwLocal.Logging;
-using ImmichNsfwLocal.Models;
-using ImmichNsfwLocal.Utils;
+using ImmichContentClassifier.Core;
+using ImmichContentClassifier.Immich;
+using ImmichContentClassifier.Logging;
+using ImmichContentClassifier.Models;
+using ImmichContentClassifier.Utils;
 using NsfwSpyNS;
 
 Environment.SetEnvironmentVariable("CUDA_VISIBLE_DEVICES", "-1");   // Force CPU

@@ -1,6 +1,6 @@
 // Purpose: Provide simple structured logging to console and file with log levels.
 
-namespace ImmichNsfwLocal.Logging;
+namespace ImmichContentClassifier.Logging;
 
 public sealed class AppLogger : IDisposable
 {

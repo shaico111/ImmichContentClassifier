@@ -1,6 +1,6 @@
 // Purpose: Represent the result of processing a single asset (ok, flagged, skipped, error) for counters.
 
-namespace ImmichNsfwLocal.Models;
+namespace ImmichContentClassifier.Models;
 
 public readonly record struct ProcessingOutcome(int Ok, int Flagged, int Error, int Skipped, int MissingMedia)
 {

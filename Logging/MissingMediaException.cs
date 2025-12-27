@@ -1,6 +1,6 @@
 // Purpose: Represent a known error when expected media/thumbnail content is missing.
 
-namespace ImmichNsfwLocal.Logging;
+namespace ImmichContentClassifier.Logging;
 
 public sealed class MissingMediaException : Exception
 {

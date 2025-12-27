@@ -1,6 +1,6 @@
 // Purpose: Build a DateFilter from CLI inputs and normalize values to UTC ISO strings.
 
-namespace ImmichNsfwLocal.Core;
+namespace ImmichContentClassifier.Core;
 
 public static class DateFilterBuilder
 {

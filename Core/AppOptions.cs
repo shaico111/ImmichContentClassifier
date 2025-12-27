@@ -1,6 +1,6 @@
 // Purpose: Parse and validate command-line options and environment settings, and provide normalized configuration for the run.
 
-namespace ImmichNsfwLocal.Core;
+namespace ImmichContentClassifier.Core;
 
 public sealed record AppOptions(
     string BaseUrl,

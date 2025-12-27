@@ -1,6 +1,6 @@
 # Architecture Overview
 
-This document explains how ImmichNsfwLocal is structured.
+This document explains how ImmichContentClassifier is structured.
 
 ---
 

@@ -1,6 +1,6 @@
 // Purpose: Create and configure the HttpClient used to communicate with the Immich API.
 
-namespace ImmichNsfwLocal.Immich;
+namespace ImmichContentClassifier.Immich;
 
 public static class ImmichHttpClientFactory
 {

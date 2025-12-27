@@ -1,9 +1,9 @@
 // Purpose: Normalize thumbnail bytes for the classifier (e.g., WEBP to JPEG conversion).
 
 using ImageMagick;
-using ImmichNsfwLocal.Models;
+using ImmichContentClassifier.Models;
 
-namespace ImmichNsfwLocal.Utils;
+namespace ImmichContentClassifier.Utils;
 
 public static class ThumbnailBytes
 {

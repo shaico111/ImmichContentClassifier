@@ -1,6 +1,6 @@
 # Security and Privacy
 
-ImmichNsfwLocal is designed to keep your data private.
+ImmichContentClassifier is designed to keep your data private.
 
 ---
 

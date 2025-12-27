@@ -1,6 +1,6 @@
 // Purpose: Small helper for reading command-line flags and values in a consistent way.
 
-namespace ImmichNsfwLocal.Core;
+namespace ImmichContentClassifier.Core;
 
 public sealed class CliArgs
 {

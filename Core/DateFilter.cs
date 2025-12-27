@@ -1,5 +1,5 @@
 // Purpose: Represent normalized date/time filters for selecting assets.
 
-namespace ImmichNsfwLocal.Core;
+namespace ImmichContentClassifier.Core;
 
 public sealed record DateFilter(string? TakenAfterIsoZ, string? TakenBeforeIsoZ);

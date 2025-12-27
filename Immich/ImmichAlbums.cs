@@ -2,10 +2,10 @@
 
 using System.Text;
 using System.Text.Json;
-using ImmichNsfwLocal.Logging;
-using ImmichNsfwLocal.Models;
+using ImmichContentClassifier.Logging;
+using ImmichContentClassifier.Models;
 
-namespace ImmichNsfwLocal.Immich;
+namespace ImmichContentClassifier.Immich;
 
 public static class ImmichAlbums
 {
